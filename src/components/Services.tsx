@@ -8,8 +8,11 @@ import {
   MessageCircle, 
   Music, 
   Sparkles,
-  Heart
+  Heart,
+  ChevronDown
 } from "lucide-react";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { useState } from "react";
 
 const features = [
   { icon: Image, title: "Foto o video de portada", description: "Impacta desde el primer momento" },
@@ -25,58 +28,68 @@ const features = [
 ];
 
 const Services = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <section id="servicios" className="py-24 px-4 bg-gradient-to-b from-background to-secondary">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center space-y-4 mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold">
-            <span className="bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent">
-              Invitaciones que hablan con propósito
-            </span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Cada evento comienza con un llamado. En Kaleo Digital diseñamos invitaciones digitales únicas 
-            que llegan directo al corazón.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 pt-4 text-lg">
-            <span className="flex items-center gap-2 text-primary font-medium">
-              📱 Instantáneas
-            </span>
-            <span className="flex items-center gap-2 text-primary font-medium">
-              🌎 Ecológicas
-            </span>
-            <span className="flex items-center gap-2 text-primary font-medium">
-              💫 Completamente personalizables
-            </span>
+        <Collapsible open={isOpen} onOpenChange={setIsOpen}>
+          <div className="text-center space-y-4 mb-8 animate-fade-in">
+            <CollapsibleTrigger className="w-full group">
+              <div className="flex items-center justify-center gap-3 cursor-pointer">
+                <h2 className="text-4xl md:text-5xl font-bold">
+                  <span className="bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent">
+                    Invitaciones que hablan con propósito
+                  </span>
+                </h2>
+                <ChevronDown className={`w-8 h-8 text-primary transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+              </div>
+            </CollapsibleTrigger>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Cada evento comienza con un llamado. En Kaleo Digital diseñamos invitaciones digitales únicas 
+              que llegan directo al corazón.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 pt-4 text-lg">
+              <span className="flex items-center gap-2 text-primary font-medium">
+                📱 Instantáneas
+              </span>
+              <span className="flex items-center gap-2 text-primary font-medium">
+                🌎 Ecológicas
+              </span>
+              <span className="flex items-center gap-2 text-primary font-medium">
+                💫 Completamente personalizables
+              </span>
+            </div>
           </div>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
-            return (
-              <Card 
-                key={index} 
-                className="p-6 hover:shadow-xl transition-all duration-300 border-border/50 bg-card/50 backdrop-blur-sm animate-fade-in group"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex flex-col items-center text-center space-y-4">
-                  <div className="p-4 bg-gradient-to-br from-primary/10 to-primary-light/10 rounded-full group-hover:scale-110 transition-transform duration-300">
-                    <Icon className="w-8 h-8 text-primary" />
-                  </div>
-                  <div className="space-y-2">
-                    <h3 className="font-semibold text-lg text-foreground">
-                      {feature.title}
-                    </h3>
-                    <p className="text-muted-foreground">
-                      {feature.description}
-                    </p>
-                  </div>
-                </div>
-              </Card>
-            );
-          })}
-        </div>
+          <CollapsibleContent>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <Card 
+                    key={index} 
+                    className="p-6 hover:shadow-xl transition-all duration-300 border-border/50 bg-card/50 backdrop-blur-sm group"
+                  >
+                    <div className="flex flex-col items-center text-center space-y-4">
+                      <div className="p-4 bg-gradient-to-br from-primary/10 to-primary-light/10 rounded-full group-hover:scale-110 transition-transform duration-300">
+                        <Icon className="w-8 h-8 text-primary" />
+                      </div>
+                      <div className="space-y-2">
+                        <h3 className="font-semibold text-lg text-foreground">
+                          {feature.title}
+                        </h3>
+                        <p className="text-muted-foreground">
+                          {feature.description}
+                        </p>
+                      </div>
+                    </div>
+                  </Card>
+                );
+              })}
+            </div>
+          </CollapsibleContent>
+        </Collapsible>
       </div>
     </section>
   );

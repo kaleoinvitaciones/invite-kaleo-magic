@@ -13,15 +13,20 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-background to-secondary px-4 py-20">
-      <div className="absolute top-8 left-1/2 -translate-x-1/2 animate-fade-in">
-        <img 
-          src={kaleoLogo} 
-          alt="Kaleo Digital Logo" 
-          className="h-16 md:h-20 w-auto"
-        />
+      <div className="absolute top-8 left-1/2 md:left-8 -translate-x-1/2 md:translate-x-0 animate-fade-in">
+        <div className="flex items-center gap-4">
+          <img 
+            src={kaleoLogo} 
+            alt="Kaleo Digital Logo" 
+            className="h-20 md:h-24 w-auto"
+          />
+          <span className="hidden md:block text-3xl font-bold bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent">
+            Kaleo Digital
+          </span>
+        </div>
       </div>
 
-      <div className="max-w-4xl mx-auto text-center space-y-8 mt-24 animate-slide-up">
+      <div className="max-w-4xl mx-auto text-center space-y-8 mt-32 md:mt-24 animate-slide-up">
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
           <span className="bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent">
             El llamado comienza aquí
