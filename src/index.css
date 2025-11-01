@@ -9,42 +9,50 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 40 35% 30%;
+    --foreground: 35 40% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 40 35% 30%;
+    --card-foreground: 35 40% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 40 35% 30%;
+    --popover-foreground: 35 40% 20%;
 
-    --primary: 42 48% 54%;
+    --primary: 42 68% 48%;
     --primary-foreground: 0 0% 100%;
-    --primary-dark: 42 55% 39%;
-    --primary-light: 42 60% 68%;
+    --primary-dark: 38 65% 32%;
+    --primary-light: 45 72% 65%;
+    --primary-glow: 48 85% 75%;
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 40 35% 30%;
+    --secondary: 40 15% 95%;
+    --secondary-foreground: 35 40% 25%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 40 15% 50%;
+    --muted: 40 10% 94%;
+    --muted-foreground: 35 20% 45%;
 
-    --accent: 42 48% 54%;
+    --accent: 35 55% 42%;
     --accent-foreground: 0 0% 100%;
+    --accent-light: 35 45% 88%;
+
+    --tertiary: 28 40% 60%;
+    --tertiary-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 92%;
-    --input: 0 0% 92%;
-    --ring: 42 48% 54%;
+    --border: 40 12% 88%;
+    --input: 40 12% 90%;
+    --ring: 42 68% 48%;
 
     --radius: 0.75rem;
     
-    --gradient-gold: linear-gradient(135deg, hsl(42 48% 54%), hsl(42 60% 68%));
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(0 0% 98%));
+    --gradient-gold: linear-gradient(135deg, hsl(42 68% 48%), hsl(45 72% 65%), hsl(48 85% 75%));
+    --gradient-warm: linear-gradient(135deg, hsl(35 55% 42%), hsl(42 68% 48%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(40 15% 97%));
+    --gradient-hero: linear-gradient(180deg, hsl(0 0% 100%), hsl(45 30% 96%), hsl(40 15% 95%));
     
-    --shadow-soft: 0 4px 20px -4px hsl(42 48% 54% / 0.15);
-    --shadow-hover: 0 8px 30px -8px hsl(42 48% 54% / 0.25);
+    --shadow-soft: 0 4px 20px -4px hsl(42 68% 48% / 0.2);
+    --shadow-hover: 0 8px 30px -8px hsl(42 68% 48% / 0.35);
+    --shadow-strong: 0 12px 40px -10px hsl(38 65% 32% / 0.3);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 

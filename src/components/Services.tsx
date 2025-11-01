@@ -31,18 +31,18 @@ const Services = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section id="servicios" className="py-24 px-4 bg-gradient-to-b from-background to-secondary">
+    <section id="servicios" className="py-24 px-4 bg-gradient-to-b from-secondary via-accent-light to-background">
       <div className="max-w-7xl mx-auto">
         <Collapsible open={isOpen} onOpenChange={setIsOpen}>
           <div className="text-center space-y-4 mb-8 animate-fade-in">
             <CollapsibleTrigger className="w-full group">
               <div className="flex items-center justify-center gap-3 cursor-pointer">
                 <h2 className="text-4xl md:text-5xl font-bold">
-                  <span className="bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-accent via-primary to-primary-light bg-clip-text text-transparent">
                     Invitaciones que hablan con propósito
                   </span>
                 </h2>
-                <ChevronDown className={`w-8 h-8 text-primary transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-8 h-8 text-accent transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
               </div>
             </CollapsibleTrigger>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -69,11 +69,11 @@ const Services = () => {
                 return (
                   <Card 
                     key={index} 
-                    className="p-6 hover:shadow-xl transition-all duration-300 border-border/50 bg-card/50 backdrop-blur-sm group"
+                    className="p-6 hover:shadow-xl transition-all duration-300 border-accent/20 bg-card/80 backdrop-blur-sm group hover:border-primary/50"
                   >
                     <div className="flex flex-col items-center text-center space-y-4">
-                      <div className="p-4 bg-gradient-to-br from-primary/10 to-primary-light/10 rounded-full group-hover:scale-110 transition-transform duration-300">
-                        <Icon className="w-8 h-8 text-primary" />
+                      <div className="p-4 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full group-hover:scale-110 group-hover:from-primary/30 group-hover:to-primary-glow/30 transition-all duration-300">
+                        <Icon className="w-8 h-8 text-accent group-hover:text-primary" />
                       </div>
                       <div className="space-y-2">
                         <h3 className="font-semibold text-lg text-foreground">

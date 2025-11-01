@@ -13,11 +13,11 @@ const Contact = () => {
   };
 
   return (
-    <section id="contacto" className="py-24 px-4 bg-gradient-to-b from-secondary to-background">
+    <section id="contacto" className="py-24 px-4 bg-gradient-to-b from-accent-light/30 via-secondary to-background">
       <div className="max-w-4xl mx-auto">
         <div className="text-center space-y-6 mb-12 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold">
-            <span className="bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-accent via-primary to-primary-light bg-clip-text text-transparent">
               Tu llamado comienza aquí
             </span>
           </h2>
@@ -26,11 +26,11 @@ const Contact = () => {
           </p>
         </div>
 
-        <Card className="p-8 md:p-12 bg-card/50 backdrop-blur-sm border-border/50 shadow-xl animate-slide-up">
+        <Card className="p-8 md:p-12 bg-card/80 backdrop-blur-sm border-accent/30 shadow-xl animate-slide-up">
           <div className="grid md:grid-cols-2 gap-6">
             <Button
               size="lg"
-              className="h-auto py-8 flex flex-col items-center gap-4 bg-gradient-to-r from-primary to-primary-light hover:shadow-xl transition-all duration-300 group"
+              className="h-auto py-8 flex flex-col items-center gap-4 bg-gradient-to-r from-accent to-primary hover:from-accent-foreground hover:to-primary-dark hover:shadow-xl hover:scale-105 transition-all duration-300 group"
               onClick={handleWhatsApp}
             >
               <MessageCircle className="w-12 h-12 group-hover:scale-110 transition-transform duration-300" />
@@ -43,7 +43,7 @@ const Contact = () => {
             <Button
               size="lg"
               variant="outline"
-              className="h-auto py-8 flex flex-col items-center gap-4 border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 group"
+              className="h-auto py-8 flex flex-col items-center gap-4 border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground hover:scale-105 transition-all duration-300 group"
               onClick={handleEmail}
             >
               <Mail className="w-12 h-12 group-hover:scale-110 transition-transform duration-300" />

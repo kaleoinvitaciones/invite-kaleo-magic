@@ -7,7 +7,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-secondary border-t border-border py-12 px-4">
+    <footer className="bg-gradient-to-b from-background to-accent-light/50 border-t border-accent/30 py-12 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Logo and Description */}
@@ -61,31 +61,31 @@ const Footer = () => {
                 href="https://wa.me/573012749388" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="p-3 bg-primary/10 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 group"
+                className="p-3 bg-accent/20 rounded-full hover:bg-accent hover:text-accent-foreground hover:scale-110 transition-all duration-300 group"
                 aria-label="WhatsApp"
               >
-                <MessageCircle className="w-5 h-5 text-primary group-hover:text-primary-foreground" />
+                <MessageCircle className="w-5 h-5 text-accent group-hover:text-accent-foreground" />
               </a>
               <a 
                 href="#" 
-                className="p-3 bg-primary/10 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 group"
+                className="p-3 bg-tertiary/20 rounded-full hover:bg-tertiary hover:text-tertiary-foreground hover:scale-110 transition-all duration-300 group"
                 aria-label="Instagram"
               >
-                <Instagram className="w-5 h-5 text-primary group-hover:text-primary-foreground" />
+                <Instagram className="w-5 h-5 text-tertiary group-hover:text-tertiary-foreground" />
               </a>
               <a 
                 href="#" 
-                className="p-3 bg-primary/10 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 group"
+                className="p-3 bg-primary/20 rounded-full hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300 group"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5 text-primary group-hover:text-primary-foreground" />
               </a>
               <a 
                 href="mailto:kaleoinvitaciones@gmail.com"
-                className="p-3 bg-primary/10 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 group"
+                className="p-3 bg-accent/20 rounded-full hover:bg-accent hover:text-accent-foreground hover:scale-110 transition-all duration-300 group"
                 aria-label="Email"
               >
-                <Mail className="w-5 h-5 text-primary group-hover:text-primary-foreground" />
+                <Mail className="w-5 h-5 text-accent group-hover:text-accent-foreground" />
               </a>
             </div>
           </div>

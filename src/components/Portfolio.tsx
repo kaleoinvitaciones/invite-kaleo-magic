@@ -47,18 +47,18 @@ const Portfolio = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section id="portafolio" className="py-24 px-4 bg-background">
+    <section id="portafolio" className="py-24 px-4 bg-gradient-to-b from-background to-accent-light/30">
       <div className="max-w-7xl mx-auto">
         <Collapsible open={isOpen} onOpenChange={setIsOpen}>
           <div className="text-center space-y-4 mb-8 animate-fade-in">
             <CollapsibleTrigger className="w-full group">
               <div className="flex items-center justify-center gap-3 cursor-pointer">
                 <h2 className="text-4xl md:text-5xl font-bold">
-                  <span className="bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-tertiary via-primary to-accent bg-clip-text text-transparent">
                     Nuestros Kaleos
                   </span>
                 </h2>
-                <ChevronDown className={`w-8 h-8 text-primary transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-8 h-8 text-tertiary transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
               </div>
             </CollapsibleTrigger>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -71,7 +71,7 @@ const Portfolio = () => {
               {portfolioItems.map((item, index) => (
                 <Card 
                   key={index}
-                  className="group cursor-pointer overflow-hidden border-border/50 hover:shadow-2xl transition-all duration-500"
+                  className="group cursor-pointer overflow-hidden border-accent/30 hover:border-primary/50 hover:shadow-2xl transition-all duration-500"
                   onClick={() => item.url !== "#" && window.open(item.url, '_blank')}
                 >
                   <div className={`h-64 bg-gradient-to-br ${item.gradient} flex items-center justify-center relative overflow-hidden`}>
