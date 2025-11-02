@@ -67,14 +67,14 @@ const Footer = () => {
                 <MessageCircle className="w-5 h-5 text-accent group-hover:text-accent-foreground" />
               </a>
               <a 
-                href="https://www.facebook.com/share/19uqmKuuC5/" 
+                href="https://www.instagram.com/kaleodigital?igsh=eGx0amttaDRvM2o2" 
                 className="p-3 bg-tertiary/20 rounded-full hover:bg-tertiary hover:text-tertiary-foreground hover:scale-110 transition-all duration-300 group"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5 text-tertiary group-hover:text-tertiary-foreground" />
               </a>
               <a 
-                href="https://www.instagram.com/kaleodigital?igsh=eGx0amttaDRvM2o2" 
+                href="https://www.facebook.com/share/19uqmKuuC5/" 
                 className="p-3 bg-primary/20 rounded-full hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300 group"
                 aria-label="Facebook"
               >
