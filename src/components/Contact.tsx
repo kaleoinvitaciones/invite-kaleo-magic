@@ -54,14 +54,7 @@ const Contact = () => {
             </Button>
           </div>
 
-          <div className="mt-8 text-center">
-            <p className="text-muted-foreground">
-              También puedes contactarnos por teléfono: 
-              <a href="tel:+573012749388" className="text-primary font-semibold hover:underline ml-2">
-                +57 301 274 9388
-              </a>
-            </p>
-          </div>
+          
         </Card>
       </div>
     </section>
