@@ -13,12 +13,12 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-background via-accent-light to-secondary px-4 py-20">
-      <div className="absolute top-8 left-1/2 md:left-8 -translate-x-1/2 md:translate-x-0 animate-fade-in">
-        <div className="flex items-center gap-4">
+      <div className="absolute top-8 left-1/2 -translate-x-1/2 md:left-8 md:translate-x-0 animate-fade-in">
+        <div className="flex items-center justify-center md:justify-start gap-4">
           <img 
             src={kaleoLogo} 
             alt="Kaleo Digital Logo" 
-            className="h-20 md:h-24 w-auto"
+            className="h-24 md:h-24 w-auto"
           />
           <span className="hidden md:block text-3xl font-bold bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent">
             Kaleo Digital
