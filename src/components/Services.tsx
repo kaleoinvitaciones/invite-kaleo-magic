@@ -56,13 +56,17 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {visibleFeatures.map((feature, index) => {
             const Icon = feature.icon;
+            const isNewItem = index >= 2;
             return (
               <Card 
                 key={index} 
-                className="p-6 hover:shadow-xl transition-all duration-300 border-accent/20 bg-card/80 backdrop-blur-sm group hover:border-primary/50"
+                className={`p-6 hover:shadow-xl transition-all duration-300 border-accent/20 bg-card/80 backdrop-blur-sm group hover:border-primary/50 ${
+                  isNewItem && showAll ? 'animate-fade-in-item' : ''
+                }`}
+                style={isNewItem && showAll ? { animationDelay: `${(index - 2) * 0.1}s` } : {}}
               >
                 <div className="flex flex-col items-center text-center space-y-4">
                   <div className="p-4 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full group-hover:scale-110 group-hover:from-primary/30 group-hover:to-primary-glow/30 transition-all duration-300">

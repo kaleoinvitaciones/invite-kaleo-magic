@@ -61,13 +61,18 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in">
-          {visibleItems.map((item, index) => (
-            <Card 
-              key={index}
-              className="group cursor-pointer overflow-hidden border-accent/30 hover:border-primary/50 hover:shadow-2xl transition-all duration-500"
-              onClick={() => item.url !== "#" && window.open(item.url, '_blank')}
-            >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {visibleItems.map((item, index) => {
+            const isNewItem = index >= 2;
+            return (
+              <Card 
+                key={index}
+                className={`group cursor-pointer overflow-hidden border-accent/30 hover:border-primary/50 hover:shadow-2xl transition-all duration-500 ${
+                  isNewItem && showAll ? 'animate-fade-in-item' : ''
+                }`}
+                style={isNewItem && showAll ? { animationDelay: `${(index - 2) * 0.1}s` } : {}}
+                onClick={() => item.url !== "#" && window.open(item.url, '_blank')}
+              >
               <div className={`h-64 bg-gradient-to-br ${item.gradient} flex items-center justify-center relative overflow-hidden`}>
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
                 <div className="relative z-10 text-white text-center p-6 transform group-hover:scale-110 transition-transform duration-300">
@@ -86,7 +91,8 @@ const Portfolio = () => {
                 </p>
               </div>
             </Card>
-          ))}
+            );
+          })}
         </div>
 
         {portfolioItems.length > 2 && (
