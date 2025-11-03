@@ -13,7 +13,7 @@ const portfolioItems = [
   // Placeholder for more portfolio items
   {
     title: "Boda Elegante",
-    url: "#",
+    url: "https://conferencia-parejas.kaleo.digital/",
     description: "Invitación de boda minimalista",
     gradient: "from-primary to-primary-light"
   },
